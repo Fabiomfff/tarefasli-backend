@@ -65,6 +65,7 @@ app.get('/login', (req, res) => {
         [username, password],
         (err, results) => {
             if (err) {
+                console.log('login error:', err);
                 return res.status(500).json({ error: 'Login failed', details: err });
             }
 
